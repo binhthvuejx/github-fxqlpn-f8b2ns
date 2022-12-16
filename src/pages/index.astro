@@ -1,0 +1,35 @@
+---
+// Component Imports
+import CounterVisible from '../components/CounterVisible.vue'
+import CounterOnly from '../components/CounterOnly.vue'
+
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      html,
+      body {
+        font-family: system-ui;
+        margin: 0;
+      }
+      body {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Client:visible</h1>
+      <CounterVisible client:visible></Counter>
+      <hr>
+      <h1>Client:only</h1>
+      <CounterOnly client:only></Counter>
+    </main>
+  </body>
+</html>
